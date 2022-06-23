@@ -1,0 +1,235 @@
+/* barra de navegacion superior */
+#flex-navbar {
+  height: 7 0px;
+  display: flex;
+  font-size: 30px;
+  background-color: black;
+  position: fixed;
+  z-index: 100;
+  top: 0px;
+}
+
+/*Inicio de secciones de la barra de navegacion  */
+/* seccion para el logo de la barra */
+#netflix-logo {
+flex: 15%;
+text-align:center;
+}
+
+/* seccion para los accesos directos en la barra */
+#accesos {
+flex: 60%;
+flex-direction: row;
+flex-wrap: wrap;
+text-align: start;
+}
+
+/* seccio para las opciones de usuario en la barra */
+#usuario {
+flex: 25%;
+text-align: center;
+flex-wrap: wrap;
+}
+
+/* propiedades del logo de la barra */
+#logo {
+  width: 50%;
+}
+
+/* propiedades de cada acceso directo en la seccion de accesos */
+.accesos-btn {
+  background-color: transparent;
+  border-color: transparent;
+  color: white;
+  height: 100%;
+}
+/* propiedades de cada acceso directo en la seccion de accesos cuando se posiciona el mouse arriba del acceso */
+.accesos-btn:hover {
+  color: gray;
+}
+
+/* eliminar margen y padding de toda la pagina */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* propiedades de los iconos de la seccion de usuario en la barra */
+i{
+  color: white;
+  margin-right: 1rem;
+}
+
+/* clase para volver resposiva (la imagen se redimensiona cuando cambia el tamaño de la pantalla) la imagen de fondo */
+.responsive {
+  height: auto;
+  width: 100%;
+}
+
+.img-principal{
+  position: relative;
+  text-align: left;
+}
+
+.descripcion{
+  position: absolute;
+  top: 45%;
+  left: 25%;
+  width: 40%;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  transform: translate(-50%, -50%);
+}
+.btn-desc { 
+  background-color: transparent;
+  color: black!important;
+  border: 2px solid black;
+  border-radius: 7px;
+}
+
+.btn-desc:hover {
+  background-color: black!important;
+  color: white!important;
+  text-decoration: none;
+}
+#titulo {
+  font-size: 3rem;
+}
+#resumen {
+  font-size: 1.5rem;
+  width: 80%;
+}
+@media (max-width: 1280px) {
+  #titulo {
+    font-size: 2rem;
+  }
+  #resumen {
+    font-size: 2rem;
+    width: 80%;
+  }
+
+  #accesos {
+    flex: 40%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: start;
+    }
+    
+    /* seccio para las opciones de usuario en la barra */
+    #usuario {
+    flex: 35%;
+    text-align: center;
+    flex-wrap: wrap;
+    }
+    #flex-navbar {
+      height: auto;
+      display: flex;
+      font-size: 30px;
+      background-color: black;
+      position: sticky;
+      z-index: 100;
+      top: 0px;
+    }
+}
+
+@media (max-width: 800px) {
+  #titulo {
+    font-size: 1rem;
+  }
+  #resumen {
+    font-size: 1rem;
+    width: 80%;
+  }
+
+  #accesos {
+    flex: 30%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: start;
+    }
+    
+    /* seccio para las opciones de usuario en la barra */
+    #usuario {
+    flex: 45%;
+    text-align: center;
+    flex-wrap: wrap;
+    }
+}
+
+/* propiedades de la opcion dvd en la seccion de usuario en la barra de navegacion */
+#dvd {
+  background-color: transparent;
+  color: white;
+  border-color: transparent;
+  margin-right: 1rem;
+  height: 100%;
+}
+/* propiedades de la opcion dvd en la seccion de usuario en la barra de navegacion cuando el mouse se posiciona arriba*/
+#dvd:hover {
+  color: gray;
+}
+
+/* propiedad para que el scroll bar se mueva suavemente */
+html {
+  scroll-behavior: smooth;
+}
+
+/* propiedades de la seccion usuario para los botones que contienen cada icono */
+#usuario > button {
+  background-color: transparent;
+  border-color: transparent;
+  color: white;
+  height: 100%;
+}
+/* propiedades de la seccion usuario para los botones que contienen cada icono cuando posicionas el mouse sobre el boton*/
+#usuario > button :hover {
+  color: gray;
+}
+
+/* propiedades de los reels de imagenes asignandole la propiedad de flex */
+.reel {
+  display: flex;
+}
+.subtitulos {
+  color: white;
+}
+
+.body {
+  background-color: black;
+}
+.reels {
+  margin-left: 5%;
+}
+
+.item {
+  position: relative;
+  display: block;
+  flex: 20%;
+  transition: transform 500ms;
+}
+
+.reel:focus-within .item,
+.reel:hover .item {
+  transform: translateX(-25%);
+}
+
+.item:focus ~ .item,
+.item:hover ~ .item {
+  transform: translateX(25%);
+}
+
+.reel .item:focus,
+.reel .item:hover {
+  transform: scale(1.5);
+  z-index: 1;
+}
+
+.item img {
+  display: block;
+  max-width: 100%;
+}
+
+.footer {
+  background-color: black;
+}
